@@ -1,6 +1,5 @@
 package lab03;
-
-
+public class Task3 {
     public static void main(String[] args) {
         printResults(1.5);
         printResults(0.5);
@@ -19,7 +18,6 @@ package lab03;
         printResults(Double.NEGATIVE_INFINITY);
     }
 
-   
     public static double sum(double eps) {
         if (Double.isNaN(eps) || Double.isInfinite(eps) || eps <= 0.0) {
             throw new IllegalArgumentException("param eps = " + eps);
@@ -27,7 +25,7 @@ package lab03;
 
         double total = 0.0;
         int i = 1;
-        double term = -1.0; // (-1)^1 / 1! = -1.0
+        double term = -1.0; 
 
         while (Math.abs(term) >= eps) {
             total += term;
@@ -38,7 +36,6 @@ package lab03;
         return total;
     }
 
-  
     static void printResults(double eps) {
         System.out.print("eps:" + eps + " result:");
         try {
