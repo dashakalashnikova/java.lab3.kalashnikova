@@ -2,7 +2,6 @@ package lab03;
 
 
 public class Task1 {
-
     public static void main(String[] args) {
         printResults(0.0, 1);
         printResults(0.0, 10);
@@ -24,7 +23,6 @@ public class Task1 {
         printResults(Double.NEGATIVE_INFINITY, 5);
     }
 
- 
     public static double calculateSum(double m, int k) {
         if (k < 1 || k > 30) {
             throw new IllegalArgumentException("param k = " + k);
@@ -40,7 +38,6 @@ public class Task1 {
         return sum;
     }
 
- 
     static void printResults(double m, int k) {
         System.out.print("m:" + m + " k:" + k + " result:");
         try {
