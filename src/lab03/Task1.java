@@ -1,19 +1,8 @@
 package lab03;
 
-/**
- * Lab 03, Task 1 (Variant 6)
- * Expression: \sum_{i=1}^{k} \sqrt{m / i} * \sin(m * i), k <= 30
- *
- * @author Kalashnikova
- */
+
 public class Task1 {
 
-    /**
-     * Entry point. Tests the method {@code calculateSum(m, k)} by calling the helper
-     * method {@code printResults(m, k)} few times with different arguments.
-     *
-     * @param args command line arguments
-     */
     public static void main(String[] args) {
         printResults(0.0, 1);
         printResults(0.0, 10);
@@ -35,19 +24,7 @@ public class Task1 {
         printResults(Double.NEGATIVE_INFINITY, 5);
     }
 
-    /**
-     * Calculates the sum of the series: \sum_{i=1}^{k} \sqrt{m / i} * \sin(m * i).
-     * Special cases:
-     * <ul><li>If parameter k is less than 1 or greater than 30, then
-     * exception IllegalArgumentException is thrown.</li>
-     * <li>If parameter m is negative or is not a finite number (NaN or Infinity), then
-     * exception IllegalArgumentException is thrown.</li></ul>
-     *
-     * @param m parameter of the series (m >= 0).
-     * @param k upper bound of summation (1 <= k <= 30).
-     * @return sum of the series.
-     * @exception IllegalArgumentException if k < 1, k > 30, m < 0, or m is NaN/Infinite.
-     */
+ 
     public static double calculateSum(double m, int k) {
         if (k < 1 || k > 30) {
             throw new IllegalArgumentException("param k = " + k);
@@ -63,12 +40,7 @@ public class Task1 {
         return sum;
     }
 
-    /**
-     * Helper method for printing result of {@code calculateSum(m, k)}.
-     *
-     * @param m parameter of the series.
-     * @param k upper bound of summation.
-     */
+ 
     static void printResults(double m, int k) {
         System.out.print("m:" + m + " k:" + k + " result:");
         try {
